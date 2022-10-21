@@ -1,0 +1,240 @@
+definitions:
+  web.response:
+    properties:
+      data: {}
+    type: object
+info:
+  contact: {}
+  description: This API Handle dental appointments
+  title: Clinic Appointment System API
+  version: "1.0"
+paths:
+  /appointments:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Get appointments
+      tags:
+      - domain.Appointment
+    post:
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Create appointment
+      tags:
+      - domain.Appointment
+  /appointments/dni:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Get appointment by patient identity document
+      tags:
+      - domain.Appointment
+  /appointments/dni/lic:
+    post:
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Create appointment by patient identity document and dentist license
+      tags:
+      - domain.Appointment
+  /appointments/id:
+    delete:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Delete a appointment by id
+      tags:
+      - domain.Appointment
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Get appointment by id
+      tags:
+      - domain.Appointment
+    patch:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Update some fils of appointment by id
+      tags:
+      - domain.Appointment
+    put:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Update a appointment by id
+      tags:
+      - domain.Appointment
+  /dentists:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Get all dentists
+      tags:
+      - domain.Dentist
+    post:
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Create a dentist
+      tags:
+      - domain.Dentist
+  /dentists/id:
+    delete:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Delete a dentist by id
+      tags:
+      - domain.Dentist
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Get dentist by id
+      tags:
+      - domain.Dentist
+    patch:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Update some fills of dentist by id
+      tags:
+      - domain.Dentist
+    put:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Update a dentist by id
+      tags:
+      - domain.Dentist
+  /patients:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Get all patients
+      tags:
+      - domain.Patient
+    post:
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Create a patient
+      tags:
+      - domain.Patient
+  /patients/id:
+    delete:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Delete a patient by id
+      tags:
+      - domain.Patient
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Get patient by id
+      tags:
+      - domain.Patient
+    patch:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Update some fills of patient by id
+      tags:
+      - domain.Patient
+    put:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: Update a patient by id
+      tags:
+      - domain.Patient
+swagger: "2.0"
